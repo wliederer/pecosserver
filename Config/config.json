@@ -1,0 +1,9 @@
+{
+  "development": {
+    "username": "root",
+    "password": "",
+    "database": "pecos",
+    "host": "localhost",
+    "dialect": "mysql"
+  }
+}
