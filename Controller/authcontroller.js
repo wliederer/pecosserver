@@ -24,14 +24,15 @@ exports.logout = function(req,res, next) {
 }
 
 exports.home = function(req, res, next) {
-    try{
+    
         myClient.get(url).then(response => {
             res.setHeader('Access-Control-Allow-Origin', '*');
             res.json(response.data)
+        }).catch(err => {
+
+            res.status(400).json({message: "something went wrong"});
         });
-    } catch(error) {
-            res.json({message: "something went wrong"});
-    }
+
 }
 
 exports.search = function(req, res, next) {
